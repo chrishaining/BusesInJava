@@ -18,11 +18,24 @@ public class Bus {
         return this.destination;
     }
 
-    public int getCapacity() { return this.capacity; }
+    public int getCapacity() {
+        return this.capacity;
+    }
 
     //getter method passengers
     public int passengerCount() {
-    return this.passengers.size();
+        return this.passengers.size();
     }
 
+    public void addPassenger(Person person) {
+        if (this.passengerCount() < this.capacity) {
+            passengers.add(person);
+        }
+    }
+
+    public void removePassenger() {
+        if (this.passengerCount() > 0) {
+            this.passengers.remove(0);
+        }
+    }
 }
