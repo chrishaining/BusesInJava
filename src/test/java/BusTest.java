@@ -27,4 +27,8 @@ public class BusTest {
 
 
     //arraylist of passengers
+    @Test
+    public void PassengersListIsEmptyAtStart() {
+        assertEquals(0, bus.passengerCount());
+    }
 }
