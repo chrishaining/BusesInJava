@@ -34,6 +34,7 @@ public class Bus {
     }
 
     public void removePassenger() {
+//        Checks that there are passengers to remove to avoid NullExceptionError.
         if (this.passengerCount() > 0) {
             this.passengers.remove(0);
         }
