@@ -9,7 +9,7 @@ public class BusTest {
 
     @Before
     public void before() {
-        bus = new Bus("Ocean Terminal");
+        bus = new Bus("Ocean Terminal", 30);
     }
 
 
@@ -19,9 +19,11 @@ public class BusTest {
         assertEquals("Ocean Terminal", bus.getDestination());
     }
 
-
-
     //capacity
+    @Test
+    public void hasCapacity() {
+        assertEquals(30, bus.getCapacity());
+    }
 
 
     //arraylist of passengers
